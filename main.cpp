@@ -1,34 +1,26 @@
 #include <iostream>
 #include "DataStructures/LinkedList.cpp"
 #include "Sorts/SortAlgorithms.cpp"
+#include "DataStructures/BinarySearchTree.cpp"
 
 using namespace std;
 
 int main() {
-    LinkedList<int> *list = new LinkedList<int>();
+    BinarySearchTree<int> *tree = new BinarySearchTree<int>();
 
-    /*list->insertElement(0, 0);
-    list->insertElement(1, 1);
-    list->insertElement(2, 2);
-    list->insertElement(3, 3);
-    list->insertElement(4, 4);*/
+    tree->insert(10);
+    tree->insert(5);
+    tree->insert(20);
+    tree->insert(30);
+    tree->insert(25);
+    tree->insert(18);
+    tree->insert(15);
+    tree->insert(19);
 
-    list->insertAtFirst(1);
-    list->insertAtFirst(4);
-    list->insertAtFirst(2);
-    list->insertAtFirst(5);
-    list->insertAtFirst(6);
-    list->insertAtFirst(3);
-    list->insertAtFirst(0);
+    cout << tree->getElement(25)->getData() << endl;
 
-    //cout << ("hola") << endl;
 
-    list->printList();
+    //tree->printPreOrder(tree->getRoot());
 
-    SortAlgorithms<int>::quickSort(list);
-
-    list->printList();
-
-    //cout << () << endl;
     return 0;
 }

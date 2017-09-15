@@ -7,8 +7,8 @@
 
 
 #include "../DataStructures/LinkedList.h"
-template <class T>
 
+template <class T>
 class SortAlgorithms {
 public:
     static void bubbleSort(LinkedList<T> *list);
